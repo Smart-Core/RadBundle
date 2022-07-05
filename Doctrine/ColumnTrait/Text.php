@@ -11,7 +11,7 @@ trait Text
     /**
      * @ORM\Column(type="text", nullable=true)
      */
-    #[ORM\Column(type: 'text', nullable: false)]
+    #[ORM\Column(type: 'text', nullable: true)]
     protected ?string $text = null;
 
     public function getText(): ?string
