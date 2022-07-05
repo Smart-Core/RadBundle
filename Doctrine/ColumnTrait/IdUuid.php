@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace SmartCore\RadBundle\Doctrine\ColumnTrait;
 
+use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use Ramsey\Uuid\Doctrine\UuidGenerator;
 use Ramsey\Uuid\UuidInterface;

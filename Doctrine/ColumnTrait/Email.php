@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace SmartCore\RadBundle\Doctrine\ColumnTrait;
 
+use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 
@@ -15,7 +16,7 @@ trait Email
      * @Assert\Email(mode="strict")
      * @Assert\Length(max=120)
      */
-    #[ORM\Column(type: 'string', length: 120, nullable: false)]
+    #[ORM\Column(type: Types::STRING, length: 120, nullable: true)]
     #[Assert\Email(mode: 'strict')]
     #[Assert\Length(max: 120)]
     protected ?string $email = null;

@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace SmartCore\RadBundle\Doctrine\ColumnTrait;
 
+use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
 trait IsActive
@@ -11,7 +12,7 @@ trait IsActive
     /**
      * @ORM\Column(type="boolean", nullable=false, options={"default":1})
      */
-    #[ORM\Column(type: 'boolean', nullable: false, options: ['default' => 1])]
+    #[ORM\Column(type: Types::BOOLEAN, nullable: false, options: ['default' => 1])]
     protected bool $is_active;
 
     public function isIsActive(): bool

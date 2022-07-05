@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace SmartCore\RadBundle\Doctrine\ColumnTrait;
 
+use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 
@@ -15,7 +16,7 @@ trait DescriptionNotBlank
      * @Assert\NotBlank()
      * @Assert\NotNull()
      */
-    #[ORM\Column(type: 'text', nullable: false)]
+    #[ORM\Column(type: Types::TEXT, nullable: false)]
     #[Assert\NotBlank()]
     #[Assert\NotNull()]
     protected string $description = '';

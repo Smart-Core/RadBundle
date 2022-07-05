@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace SmartCore\RadBundle\Doctrine\ColumnTrait;
 
+use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
 trait UserId
@@ -11,7 +12,7 @@ trait UserId
     /**
      * @ORM\Column(type="string", length=36, nullable=true)
      */
-    #[ORM\Column(type: 'string', length: 36, nullable: true)]
+    #[ORM\Column(type: Types::STRING, length: 36, nullable: true)]
     protected ?string $user_id = null;
 
     /**

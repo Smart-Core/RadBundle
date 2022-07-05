@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace SmartCore\RadBundle\Doctrine\ColumnTrait;
 
+use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 
@@ -15,7 +16,7 @@ trait Ipv4
      * @Assert\Ip(version="4")
      * @Assert\Length(max=15)
      */
-    #[ORM\Column(type: 'string', length: 15, nullable: true)]
+    #[ORM\Column(type: Types::STRING, length: 15, nullable: true)]
     #[Assert\Ip(version: '4')]
     #[Assert\Length(max: 15)]
     protected ?string $ipv4 = null;

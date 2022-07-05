@@ -7,12 +7,12 @@ namespace SmartCore\RadBundle\Doctrine\ColumnTrait;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
-trait CreatedAt
+trait CreatedAtTz
 {
     /**
-     * @ORM\Column(type="datetime_immutable")
+     * @ORM\Column(type="datetimetz_immutable")
      */
-    #[ORM\Column(type: Types::DATETIME_IMMUTABLE)]
+    #[ORM\Column(type: Types::DATETIMETZ_IMMUTABLE)]
     protected ?\DateTimeImmutable $created_at = null;
 
     public function getCreatedAt(): ?\DateTimeImmutable

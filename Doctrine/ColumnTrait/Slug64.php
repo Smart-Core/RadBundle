@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace SmartCore\RadBundle\Doctrine\ColumnTrait;
 
+use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 
@@ -16,7 +17,7 @@ trait Slug64
      * @Assert\NotNull()
      * @Assert\Length(max=64)
      */
-    #[ORM\Column(type: 'string', length: 64, nullable: false, unique: true)]
+    #[ORM\Column(type: Types::STRING, length: 64, nullable: false, unique: true)]
     #[Assert\Length(max: 64)]
     #[Assert\NotBlank()]
     #[Assert\NotNull()]
