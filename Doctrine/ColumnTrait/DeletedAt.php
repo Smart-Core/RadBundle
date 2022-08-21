@@ -13,14 +13,14 @@ trait DeletedAt
      * @ORM\Column(type="datetime_immutable", nullable=true)
      */
     #[ORM\Column(type: Types::DATETIME_IMMUTABLE, nullable: true)]
-    protected ?\DateTimeInterface $deleted_at = null;
+    protected ?\DateTimeImmutable $deleted_at = null;
 
-    public function getDeletedAt(): ?\DateTimeInterface
+    public function getDeletedAt(): ?\DateTimeImmutable
     {
         return $this->deleted_at;
     }
 
-    public function setDeletedAt(?\DateTimeInterface $deleted_at): self
+    public function setDeletedAt(?\DateTimeImmutable $deleted_at): self
     {
         $this->deleted_at = $deleted_at;
 
@@ -29,7 +29,7 @@ trait DeletedAt
 
     public function setIsDeleted(bool $is_deleted): self
     {
-        $this->deleted_at = $is_deleted ? new \DateTime() : null;
+        $this->deleted_at = $is_deleted ? new \DateTimeImmutable() : null;
 
         return $this;
     }

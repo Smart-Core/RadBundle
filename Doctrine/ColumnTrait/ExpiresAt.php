@@ -13,14 +13,14 @@ trait ExpiresAt
      * @ORM\Column(type="datetime_immutable", nullable=true)
      */
     #[ORM\Column(type: Types::DATETIME_IMMUTABLE, nullable: true)]
-    protected ?\DateTimeInterface $expires_at = null;
+    protected ?\DateTimeImmutable $expires_at = null;
 
-    public function getExpiresAt(): ?\DateTimeInterface
+    public function getExpiresAt(): ?\DateTimeImmutable
     {
         return $this->expires_at;
     }
 
-    public function setExpiresAt(?\DateTimeInterface $expires_at): self
+    public function setExpiresAt(?\DateTimeImmutable $expires_at): self
     {
         $this->expires_at = $expires_at;
 

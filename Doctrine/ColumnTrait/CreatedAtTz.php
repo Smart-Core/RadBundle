@@ -17,7 +17,7 @@ trait CreatedAtTz
 
     public function getCreatedAt(): ?\DateTimeImmutable
     {
-        return $this->created_at;
+        return $this->created_at?->setTimezone(new \DateTimeZone(date_default_timezone_get()));
     }
 
     public function setCreatedAt(?\DateTimeImmutable $created_at): self
