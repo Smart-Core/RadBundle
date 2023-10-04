@@ -13,7 +13,7 @@ trait UpdatedAtTz
      * @ORM\Column(type="datetimetz_immutable", nullable=true)
      */
     #[ORM\Column(type: Types::DATETIMETZ_IMMUTABLE, nullable: true)]
-    protected ?\DateTimeInterface $updated_at;
+    protected ?\DateTimeInterface $updated_at = null;
 
     public function getUpdatedAt(): ?\DateTimeImmutable
     {
