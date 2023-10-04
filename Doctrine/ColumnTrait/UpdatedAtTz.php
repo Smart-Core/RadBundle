@@ -10,7 +10,7 @@ use Doctrine\ORM\Mapping as ORM;
 trait UpdatedAtTz
 {
     /**
-     * @ORM\Column(type="datetimetz_mutable", nullable=true)
+     * @ORM\Column(type="datetimetz", nullable=true)
      */
     #[ORM\Column(type: Types::DATETIMETZ_MUTABLE, nullable: true)]
     protected ?\DateTime $updated_at = null;
