@@ -10,17 +10,17 @@ use Doctrine\ORM\Mapping as ORM;
 trait UpdatedAtTz
 {
     /**
-     * @ORM\Column(type="datetimetz_immutable", nullable=true)
+     * @ORM\Column(type="datetimetz_mutable", nullable=true)
      */
-    #[ORM\Column(type: Types::DATETIMETZ_IMMUTABLE, nullable: true)]
-    protected ?\DateTimeInterface $updated_at = null;
+    #[ORM\Column(type: Types::DATETIMETZ_MUTABLE, nullable: true)]
+    protected ?\DateTime $updated_at = null;
 
-    public function getUpdatedAt(): ?\DateTimeImmutable
+    public function getUpdatedAt(): ?\DateTime
     {
         return $this->updated_at?->setTimezone(new \DateTimeZone(date_default_timezone_get()));
     }
 
-    public function setUpdatedAt(?\DateTimeImmutable $updated_at): self
+    public function setUpdatedAt(?\DateTime $updated_at): self
     {
         $this->updated_at = $updated_at;
 
