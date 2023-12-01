@@ -12,7 +12,6 @@ use Symfony\Component\Console\Helper\ProgressBar;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\SymfonyStyle;
-use Symfony\Component\DependencyInjection\ContainerAwareTrait;
 use Symfony\Component\HttpKernel\KernelInterface;
 use Symfony\Component\Mailer\MailerInterface;
 use Symfony\Component\Stopwatch\Stopwatch;
@@ -20,8 +19,6 @@ use Symfony\Component\Stopwatch\StopwatchEvent;
 
 abstract class AbstractCommand extends Command
 {
-    use ContainerAwareTrait;
-
     protected EntityManagerInterface $em;
     protected SymfonyStyle $io;
     protected KernelInterface $kernel;
