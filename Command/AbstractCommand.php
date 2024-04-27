@@ -30,7 +30,7 @@ abstract class AbstractCommand extends Command
     private ProgressBar $progressBar;
     private Stopwatch $stopwatch;
 
-    protected function initialize(InputInterface $input, OutputInterface $output)
+    protected function initialize(InputInterface $input, OutputInterface $output): void
     {
         $this->input = $input;
         $this->output = $output;
