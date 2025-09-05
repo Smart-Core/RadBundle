@@ -6,7 +6,7 @@
     "license":     "MIT",
     "require": {
         "php": ">=7.4",
-        "ramsey/uuid-doctrine": "^1.6"
+        "ramsey/uuid-doctrine": "^2.1"
     },
     "autoload": {
         "psr-4": {
